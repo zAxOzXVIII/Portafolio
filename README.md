@@ -39,9 +39,11 @@ Portafolio/
 ├── index.html          # Landing page
 ├── css/                # Estilos
 ├── js/                 # Lógica e i18n
+│   ├── main.js
+│   └── tech-icons.js   # Iconos flotantes del Hero
 ├── assets/
+│   ├── icons/          # Logos de tecnologías (SVG)
 │   ├── images/
-│   │   └── profile.png
 │   └── cv/
 │       └── Marden_Barrera_CV.pdf   # Pendiente
 ├── data/
@@ -54,19 +56,92 @@ Portafolio/
 
 ---
 
-## Desarrollo local
+## Arrancar el proyecto en local
 
-Abre `index.html` en el navegador o usa un servidor local:
+### Requisitos
+
+- Navegador moderno (Chrome, Firefox, Edge)
+- **Python 3**, **PHP** o **Node.js** (cualquiera sirve para levantar un servidor local)
+- Git (opcional, solo para clonar el repo)
+
+### 1. Obtener el código
+
+Si aún no lo tienes en tu PC:
 
 ```bash
-# Con Python
-python -m http.server 8080
+git clone git@github.com:zAxOzXVIII/Portafolio.git
+cd Portafolio
+```
 
-# Con PHP
+Si ya lo tienes, entra a la carpeta del proyecto:
+
+```powershell
+cd C:\Users\Yenifer\Documents\cursor\Portafolio
+```
+
+### 2. Levantar un servidor local
+
+> **Importante:** no abras `index.html` directamente con doble clic (`file://`).  
+> El sitio carga `data/portfolio.json` con `fetch`, y eso **solo funciona con un servidor HTTP**.
+
+Elige **una** de estas opciones en la terminal, dentro de la carpeta `Portafolio`:
+
+**Python (recomendado en Windows):**
+
+```bash
+python -m http.server 8080
+```
+
+**PHP:**
+
+```bash
 php -S localhost:8080
 ```
 
-Visita: `http://localhost:8080`
+**Node.js (si tienes `npx`):**
+
+```bash
+npx serve -l 8080
+```
+
+Verás un mensaje indicando que el servidor está escuchando. **Deja esa terminal abierta** mientras trabajas.
+
+### 3. Abrir en el navegador
+
+Visita:
+
+```
+http://localhost:8080
+```
+
+Para ver cambios después de editar archivos, recarga la página (`F5` o `Ctrl+F5` para forzar recarga).
+
+### 4. Detener el servidor
+
+En la terminal donde corre el servidor, presiona:
+
+```
+Ctrl + C
+```
+
+### Solución de problemas
+
+| Problema | Qué hacer |
+|----------|-----------|
+| Página en blanco o sin datos | Usa `http://localhost:8080`, no `file://` |
+| Puerto 8080 ocupado | Prueba otro puerto: `python -m http.server 3000` y abre `http://localhost:3000` |
+| Cambios no se ven | Recarga con `Ctrl+F5` |
+| Error al cargar JSON | Verifica que exista `data/portfolio.json` y que el servidor esté en la raíz del proyecto |
+
+### Dónde editar contenido
+
+| Qué cambiar | Archivo |
+|-------------|---------|
+| Nombre, bio, experiencia, proyectos, contacto | `data/portfolio.json` |
+| Textos del menú, botones y secciones | `js/main.js` → `UI_STRINGS` |
+| Estilos y colores | `css/style.css` |
+| SEO (título, meta tags) | `index.html` |
+| Referencia interna del perfil | `docs/PROFILE.md` |
 
 ---
 

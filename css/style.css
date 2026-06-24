@@ -996,8 +996,40 @@ button {
 }
 
 .contact-card__icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(232, 232, 232, 0.08);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.contact-card__icon img {
+  display: block;
+  width: 1.65rem;
+  height: 1.65rem;
+  object-fit: contain;
+}
+
+.contact-card:hover .contact-card__icon {
+  transform: translateY(-2px) scale(1.05);
+  border-color: color-mix(in srgb, var(--brand-color), transparent 55%);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--brand-color), transparent 78%);
+}
+
+.contact-card--github:hover .contact-card__icon {
+  background: rgba(245, 245, 245, 0.06);
+}
+
+.contact-card--linkedin:hover .contact-card__icon {
+  background: rgba(10, 102, 194, 0.1);
+}
+
+.contact-card--whatsapp:hover .contact-card__icon {
+  background: rgba(37, 211, 102, 0.1);
 }
 
 /* Footer

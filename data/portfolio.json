@@ -6,7 +6,7 @@
     "defaultLanguage": "es"
   },
   "personal": {
-    "name": "Marden Adrian BARRERA ROSALES",
+    "name": "Marden Barrera",
     "title": {
       "es": "Ingeniero en Informática (Desarrollador backend con conocimientos en frontend)",
       "en": "Computer Engineer (Backend developer with frontend knowledge)"
@@ -198,10 +198,10 @@
         "es": "Ingeniero en Informática",
         "en": "Computer Engineer"
       },
-      "institution": null,
+      "institution": "Universidad Politecnica Territorial Agroindustrial del Estado Táchira",
       "status": "completed",
       "period": {
-        "display": { "es": "", "en": "" }
+        "display": { "es": "2020 — 2025", "en": "2020 — 2025" }
       }
     },
     {
@@ -209,13 +209,10 @@
         "es": "Curso en Ciberseguridad",
         "en": "Cybersecurity course"
       },
-      "institution": null,
+      "institution": "CISCO Networking Academy",
       "status": "in_progress",
       "period": {
-        "display": {
-          "es": "En progreso",
-          "en": "In progress"
-        }
+        "display": { "es": "2025 — Presente", "en": "2025 — Present" }
       }
     }
   ],

@@ -38,6 +38,7 @@ const UI_STRINGS = {
     contactGithub: "GitHub",
     contactLinkedin: "LinkedIn",
     contactWhatsapp: "WhatsApp",
+    contactWhatsappAction: "Enviar mensaje",
     menuOpen: "Abrir menú",
     menuClose: "Cerrar menú",
     langGroup: "Idioma",
@@ -77,6 +78,7 @@ const UI_STRINGS = {
     contactGithub: "GitHub",
     contactLinkedin: "LinkedIn",
     contactWhatsapp: "WhatsApp",
+    contactWhatsappAction: "Send message",
     menuOpen: "Open menu",
     menuClose: "Close menu",
     langGroup: "Language",
@@ -276,16 +278,18 @@ function renderContact() {
   if (!container || !contact) return;
 
   const items = [
-    { key: "github", label: t("contactGithub"), icon: "⌘", value: contact.github.username, url: contact.github.url },
-    { key: "linkedin", label: t("contactLinkedin"), icon: "in", value: contact.linkedin.display, url: contact.linkedin.url },
-    { key: "whatsapp", label: t("contactWhatsapp"), icon: "✆", value: contact.whatsapp.display, url: contact.whatsapp.url }
+    { key: "github", label: t("contactGithub"), color: "#f5f5f5", value: contact.github.username, url: contact.github.url },
+    { key: "linkedin", label: t("contactLinkedin"), color: "#0A66C2", value: contact.linkedin.display, url: contact.linkedin.url },
+    { key: "whatsapp", label: t("contactWhatsapp"), color: "#25D366", value: t("contactWhatsappAction"), url: contact.whatsapp.url }
   ];
 
   container.innerHTML = items
     .map(
       (item) => `
-      <a class="contact-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(item.label)}">
-        <span class="contact-card__icon" aria-hidden="true">${item.icon}</span>
+      <a class="contact-card contact-card--${item.key}" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(item.label)}" style="--brand-color: ${item.color};">
+        <span class="contact-card__icon" aria-hidden="true">
+          <img src="assets/icons/${item.key}.svg" alt="" width="32" height="32" loading="lazy" decoding="async">
+        </span>
         <p class="contact-card__label">${escapeHtml(item.label)}</p>
         <p class="contact-card__value">${escapeHtml(item.value)}</p>
       </a>
