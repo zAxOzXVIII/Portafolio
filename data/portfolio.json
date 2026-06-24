@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-06-22",
+    "languages": ["es", "en"],
+    "defaultLanguage": "es"
+  },
+  "personal": {
+    "name": "Marden Adrian BARRERA ROSALES",
+    "title": {
+      "es": "Ingeniero en Informática (Desarrollador backend con conocimientos en frontend)",
+      "en": "Computer Engineer (Backend developer with frontend knowledge)"
+    },
+    "tagline": {
+      "es": "Me presento como un programador capaz y didáctico con determinación y disciplina por mejorar",
+      "en": "I present myself as a capable and didactic programmer with determination and discipline to improve"
+    },
+    "location": {
+      "city": "San Cristóbal",
+      "country": "Venezuela",
+      "display": {
+        "es": "Venezuela — San Cristóbal",
+        "en": "Venezuela — San Cristóbal"
+      }
+    },
+    "photo": "assets/images/profile.png"
+  },
+  "contact": {
+    "github": {
+      "url": "https://github.com/zAxOzXVIII",
+      "username": "zAxOzXVIII"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/in/zaxoz-m-barrera-ba5886257",
+      "display": "linkedin.com/in/zaxoz-m-barrera-ba5886257"
+    },
+    "whatsapp": {
+      "url": "https://wa.me/584125802217",
+      "display": "+58 412-5802217",
+      "phone": "+584125802217"
+    }
+  },
+  "skills": [
+    {
+      "category": { "es": "Backend", "en": "Backend" },
+      "items": ["PHP", "Laravel", "Node.js", "Python", "Django"]
+    },
+    {
+      "category": { "es": "Frontend", "en": "Frontend" },
+      "items": ["JavaScript", "TypeScript", "React", "CSS", "Bootstrap", "Tailwind"]
+    },
+    {
+      "category": { "es": "Desktop", "en": "Desktop" },
+      "items": ["Tkinter"]
+    },
+    {
+      "category": { "es": "Bases de datos", "en": "Databases" },
+      "items": ["MySQL", "PostgreSQL", "MongoDB"]
+    },
+    {
+      "category": { "es": "DevOps y herramientas", "en": "DevOps & tools" },
+      "items": ["Git", "GitLab", "Docker", "n8n", "Node-RED"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "internet4E",
+      "role": {
+        "es": "Desarrollador",
+        "en": "Developer"
+      },
+      "period": {
+        "start": "2025-09-08",
+        "end": null,
+        "display": {
+          "es": "Sep 2025 — Actualidad",
+          "en": "Sep 2025 — Present"
+        }
+      },
+      "current": true,
+      "highlights": {
+        "es": [
+          "Desarrollo de soluciones web y backend para la empresa"
+        ],
+        "en": [
+          "Web and backend solution development for the company"
+        ]
+      }
+    },
+    {
+      "company": "Freelance",
+      "role": {
+        "es": "Desarrollador freelance",
+        "en": "Freelance developer"
+      },
+      "period": {
+        "start": "2022-01-01",
+        "end": null,
+        "display": {
+          "es": "2022 — Actualidad",
+          "en": "2022 — Present"
+        }
+      },
+      "current": true,
+      "highlights": {
+        "es": [
+          "Desarrollo de un sistema de gestión de licencias automotrices con gestor de permisos y verificaciones para EE.UU."
+        ],
+        "en": [
+          "Developed an automotive license management system with permission manager and U.S. verifications"
+        ]
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "license-management",
+      "name": {
+        "es": "Sistema de gestión de licencias automotrices",
+        "en": "Automotive license management system"
+      },
+      "description": {
+        "es": "Sistema con gestor de permisos y verificaciones para el mercado de EE.UU.",
+        "en": "System with permission manager and verifications for the U.S. market"
+      },
+      "technologies": ["PHP", "Laravel", "MySQL"],
+      "links": {}
+    },
+    {
+      "id": "lottery-inventory",
+      "name": {
+        "es": "Sistema de inventarios para lotería",
+        "en": "Lottery inventory system"
+      },
+      "description": {
+        "es": "Aplicación de escritorio para gestión de inventarios en una lotería.",
+        "en": "Desktop application for inventory management in a lottery business."
+      },
+      "technologies": ["Python", "Tkinter"],
+      "links": {}
+    },
+    {
+      "id": "university-projects",
+      "name": {
+        "es": "Gestión de proyectos universitarios",
+        "en": "University project management"
+      },
+      "description": {
+        "es": "Aplicación web y móvil para la gestión de proyectos en una universidad.",
+        "en": "Web and mobile application for project management at a university."
+      },
+      "technologies": ["React", "Node.js", "MySQL"],
+      "links": {}
+    },
+    {
+      "id": "activity-management",
+      "name": {
+        "es": "Aplicación de gestión de actividades",
+        "en": "Activity management application"
+      },
+      "description": {
+        "es": "Plataforma para organizar y dar seguimiento a actividades.",
+        "en": "Platform to organize and track activities."
+      },
+      "technologies": ["JavaScript", "PHP"],
+      "links": {}
+    },
+    {
+      "id": "order-system",
+      "name": {
+        "es": "Sistema de comandas",
+        "en": "Order management system"
+      },
+      "description": {
+        "es": "Sistema para gestión de pedidos y comandas en tiempo real.",
+        "en": "System for real-time order and ticket management."
+      },
+      "technologies": ["PHP", "MySQL"],
+      "links": {}
+    },
+    {
+      "id": "smart-managers",
+      "name": {
+        "es": "Gestores inteligentes",
+        "en": "Smart managers"
+      },
+      "description": {
+        "es": "Soluciones de automatización con flujos inteligentes.",
+        "en": "Automation solutions with intelligent workflows."
+      },
+      "technologies": ["n8n", "Node-RED", "Docker"],
+      "links": {}
+    }
+  ],
+  "education": [
+    {
+      "degree": {
+        "es": "Ingeniero en Informática",
+        "en": "Computer Engineer"
+      },
+      "institution": null,
+      "status": "completed",
+      "period": {
+        "display": { "es": "", "en": "" }
+      }
+    },
+    {
+      "degree": {
+        "es": "Curso en Ciberseguridad",
+        "en": "Cybersecurity course"
+      },
+      "institution": null,
+      "status": "in_progress",
+      "period": {
+        "display": {
+          "es": "En progreso",
+          "en": "In progress"
+        }
+      }
+    }
+  ],
+  "design": {
+    "theme": "dark",
+    "colors": {
+      "primary": "#0a0a0a",
+      "secondary": "#141414",
+      "accent": "#e8e8e8",
+      "text": "#f5f5f5",
+      "muted": "#a3a3a3"
+    },
+    "style": "dark_modern_minimal"
+  },
+  "assets": {
+    "cv": {
+      "source": "d:/Documentos/Word/Marden B. curriculum.docx",
+      "output": "assets/cv/Marden_Barrera_CV.pdf",
+      "status": "pending_conversion"
+    }
+  }
+}
