@@ -310,10 +310,12 @@ function renderAll() {
 
 function setLanguage(lang) {
   if (!portfolioData?.meta?.languages?.includes(lang)) return;
+  document.body.classList.add("is-changing-lang");
   currentLang = lang;
   localStorage.setItem("portfolio-lang", lang);
   renderAll();
   initScrollReveal();
+  window.setTimeout(() => document.body.classList.remove("is-changing-lang"), 180);
 }
 
 function initLanguageSwitch() {
@@ -385,6 +387,37 @@ function initHeroTechCloud() {
   window.HeroTechIcons.initRepel(container);
 }
 
+function initHeaderState() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const updateHeader = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
+
+function initCardSpotlight() {
+  const cards = document.querySelectorAll(".skill-card, .project-card, .timeline-item, .education-item, .contact-card");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+
+  if (prefersReduced || isCoarsePointer) return;
+
+  cards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      card.style.setProperty("--mouse-x", `${x}%`);
+      card.style.setProperty("--mouse-y", `${y}%`);
+    });
+  });
+}
+
 function initActiveNav() {
   const sections = document.querySelectorAll("main section[id]");
   const navLinks = document.querySelectorAll(".nav__link");
@@ -406,12 +439,15 @@ function initActiveNav() {
 }
 
 async function init() {
+  initHeroTechCloud();
+
   try {
     await loadPortfolio();
     renderAll();
     initLanguageSwitch();
     initMobileNav();
-    initHeroTechCloud();
+    initHeaderState();
+    initCardSpotlight();
     initScrollReveal();
     initActiveNav();
   } catch (error) {
