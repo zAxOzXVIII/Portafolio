@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none" role="img" aria-label="Placeholder de foto de perfil">
+  <rect width="320" height="320" fill="#1a1a1a"/>
+  <circle cx="160" cy="118" r="54" fill="#2a2a2a"/>
+  <ellipse cx="160" cy="262" rx="90" ry="74" fill="#2a2a2a"/>
+  <text x="160" y="302" text-anchor="middle" fill="#a3a3a3" font-family="system-ui,sans-serif" font-size="16" font-weight="600">MB</text>
+</svg>

@@ -36,7 +36,7 @@ Sitio estático ligero pensado para GitHub Pages: una sola página con secciones
 
 ```
 Portafolio/
-├── index.html          # Landing page (por crear)
+├── index.html          # Landing page
 ├── css/                # Estilos
 ├── js/                 # Lógica e i18n
 ├── assets/

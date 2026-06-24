@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Marden Adrian Barrera Rosales — Ingeniero en Informática, desarrollador backend con conocimientos en frontend.">
+  <meta name="author" content="Marden Adrian BARRERA ROSALES">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marden Adrian Barrera Rosales — Portafolio">
+  <meta property="og:description" content="Desarrollador backend con conocimientos en frontend. Proyectos en PHP, Laravel, React, Python y más.">
+  <meta property="og:image" content="assets/images/profile.svg">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <title>Marden Adrian Barrera Rosales — Portafolio</title>
+
+  <link rel="icon" href="assets/images/profile.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skipToContent">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="nav__logo" href="#top" aria-label="Inicio">MB</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="#skills" data-i18n="navSkills">Habilidades</a></li>
+        <li><a class="nav__link" href="#experience" data-i18n="navExperience">Experiencia</a></li>
+        <li><a class="nav__link" href="#projects" data-i18n="navProjects">Proyectos</a></li>
+        <li><a class="nav__link" href="#education" data-i18n="navEducation">Educación</a></li>
+        <li><a class="nav__link" href="#contact" data-i18n="navContact">Contacto</a></li>
+      </ul>
+
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button class="lang-switch__btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-switch__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__greeting" data-i18n="heroGreeting">Hola, soy</p>
+          <h1 class="hero__name" id="hero-title" data-field="personal.name"></h1>
+          <p class="hero__title" data-field="personal.title"></p>
+          <p class="hero__tagline" data-field="personal.tagline"></p>
+          <p class="hero__location" data-field="personal.location.display"></p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="assets/cv/Marden_Barrera_CV.pdf" download data-i18n="ctaCv">Descargar CV</a>
+            <a class="btn btn--outline" href="#contact" data-i18n="ctaContact">Contacto</a>
+            <a class="btn btn--ghost" href="#" data-field-href="contact.github.url" target="_blank" rel="noopener noreferrer" data-i18n="ctaGithub">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="hero__tech-cloud" id="hero-tech-cloud"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="skills-title" data-i18n="sectionSkills">Habilidades</h2>
+          <p class="section__subtitle" data-i18n="sectionSkillsDesc">Tecnologías y herramientas con las que trabajo</p>
+        </header>
+        <div class="skills-grid" id="skills-grid" role="list"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="experience-title" data-i18n="sectionExperience">Experiencia</h2>
+          <p class="section__subtitle" data-i18n="sectionExperienceDesc">Trayectoria profesional</p>
+        </header>
+        <div class="timeline" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="projects-title" data-i18n="sectionProjects">Proyectos</h2>
+          <p class="section__subtitle" data-i18n="sectionProjectsDesc">Trabajos destacados</p>
+        </header>
+        <div class="projects-grid" id="projects-grid" role="list"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="education-title" data-i18n="sectionEducation">Educación</h2>
+          <p class="section__subtitle" data-i18n="sectionEducationDesc">Formación académica</p>
+        </header>
+        <div class="education-list" id="education-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="contact-title" data-i18n="sectionContact">Contacto</h2>
+          <p class="section__subtitle" data-i18n="sectionContactDesc">Conectemos</p>
+        </header>
+        <div class="contact-grid reveal" id="contact-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">
+        <span data-i18n="footerMade">Hecho por</span>
+        <span data-field="personal.name"></span>
+        <span aria-hidden="true">·</span>
+        <span data-i18n="footerRights">Todos los derechos reservados</span>
+      </p>
+      <p class="site-footer__year">
+        <span data-i18n="footerYear">Año</span>
+        <span id="footer-year"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/tech-icons.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
