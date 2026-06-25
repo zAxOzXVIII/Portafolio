@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-06-22",
+    "lastUpdated": "2026-06-25",
     "languages": ["es", "en"],
     "defaultLanguage": "es"
   },
@@ -38,6 +38,10 @@
       "url": "https://wa.me/584125802217",
       "display": "+58 412-5802217",
       "phone": "+584125802217"
+    },
+    "email": {
+      "url": "mailto:mardenrosales44@gmail.com",
+      "display": "mardenrosales44@gmail.com"
     }
   },
   "skills": [
@@ -241,7 +245,7 @@
     "cv": {
       "source": "d:/Documentos/Word/Marden B. curriculum.docx",
       "output": "assets/cv/Marden_Barrera_CV.pdf",
-      "status": "pending_conversion"
+      "status": "ready"
     }
   }
 }

@@ -45,7 +45,7 @@ Portafolio/
 │   ├── icons/          # Logos de tecnologías (SVG)
 │   ├── images/
 │   └── cv/
-│       └── Marden_Barrera_CV.pdf   # Pendiente
+│       └── Marden_Barrera_CV.pdf
 ├── data/
 │   └── portfolio.json  # Contenido bilingüe
 ├── docs/

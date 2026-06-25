@@ -19,6 +19,7 @@
 | GitHub | https://github.com/zAxOzXVIII |
 | LinkedIn | https://linkedin.com/in/zaxoz-m-barrera-ba5886257 |
 | WhatsApp | +58 412-5802217 → https://wa.me/584125802217 |
+| Email | mardenrosales44@gmail.com |
 
 ## Habilidades
 
@@ -62,6 +63,6 @@
 
 ## Archivos pendientes
 
-- [ ] Convertir `Marden B. curriculum.docx` → PDF en `assets/cv/`
-- [ ] Completar institución educativa en `portfolio.json`
-- [ ] Añadir enlaces a repositorios/demos de proyectos (si aplica)
+- [x] Convertir `Marden B. curriculum.docx` → PDF en `assets/cv/Marden_Barrera_CV.pdf`
+- [x] Institución educativa en `portfolio.json`
+- [x] Enlaces a repositorios públicos (Bingo, App Harinas)
