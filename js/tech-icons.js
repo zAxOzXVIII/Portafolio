@@ -23,22 +23,45 @@ const PHYSICS = {
 };
 
 let activeCleanup = null;
+let resizeCleanup = null;
+
+function getResponsiveScale() {
+  const width = window.innerWidth;
+  if (width < 400) return 0.68;
+  if (width < 768) return 0.8;
+  if (width < 1024) return 0.9;
+  return 1;
+}
+
+function getResponsivePosition(x, y, scale) {
+  if (scale >= 0.9) return { x, y };
+  const pull = 0.88;
+  return {
+    x: 50 + (x - 50) * pull,
+    y: 50 + (y - 50) * pull
+  };
+}
 
 function renderHeroTechCloud(container) {
   if (!container) return;
 
-  container.innerHTML = HERO_TECH_ICONS.map(
-    (icon) => `
+  const scale = getResponsiveScale();
+
+  container.innerHTML = HERO_TECH_ICONS.map((icon) => {
+    const size = Math.round(icon.size * scale);
+    const pos = getResponsivePosition(icon.x, icon.y, scale);
+
+    return `
     <button
       type="button"
       class="tech-icon"
       data-tech="${icon.id}"
       data-label="${icon.name}"
-      data-base-x="${icon.x}"
-      data-base-y="${icon.y}"
-      data-size="${icon.size}"
+      data-base-x="${pos.x}"
+      data-base-y="${pos.y}"
+      data-size="${size}"
       aria-label="${icon.name}"
-      style="--x: ${icon.x}%; --y: ${icon.y}%; --size: ${icon.size}px; --delay: ${icon.delay}s; --duration: ${icon.duration}s; --brand-color: ${icon.color};"
+      style="--x: ${pos.x}%; --y: ${pos.y}%; --size: ${size}px; --delay: ${icon.delay}s; --duration: ${icon.duration}s; --brand-color: ${icon.color};"
     >
       <span class="tech-icon__float">
         <img
@@ -53,8 +76,28 @@ function renderHeroTechCloud(container) {
       </span>
       <span class="tech-icon__label">${icon.name}</span>
     </button>
-  `
-  ).join("");
+  `;
+  }).join("");
+}
+
+function initHeroTechCloudResize(container) {
+  if (resizeCleanup) resizeCleanup();
+
+  let resizeTimer = null;
+  const onResize = () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      renderHeroTechCloud(container);
+      initHeroIconRepel(container);
+    }, 160);
+  };
+
+  window.addEventListener("resize", onResize, { passive: true });
+  resizeCleanup = () => {
+    window.removeEventListener("resize", onResize);
+    clearTimeout(resizeTimer);
+    resizeCleanup = null;
+  };
 }
 
 function initHeroIconRepel(container) {
@@ -243,5 +286,6 @@ function initTouchSelection(icons) {
 
 window.HeroTechIcons = {
   render: renderHeroTechCloud,
-  initRepel: initHeroIconRepel
+  initRepel: initHeroIconRepel,
+  initResize: initHeroTechCloudResize
 };

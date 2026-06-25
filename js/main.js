@@ -393,6 +393,7 @@ function initHeroTechCloud() {
 
   window.HeroTechIcons.render(container);
   window.HeroTechIcons.initRepel(container);
+  window.HeroTechIcons.initResize?.(container);
 }
 
 function initHeaderState() {

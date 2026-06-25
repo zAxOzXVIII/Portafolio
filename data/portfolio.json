@@ -128,32 +128,36 @@
       "links": {}
     },
     {
-      "id": "lottery-inventory",
+      "id": "bingo-inventory",
       "name": {
-        "es": "Sistema de inventarios para lotería",
-        "en": "Lottery inventory system"
+        "es": "Sistema de inventarios para Bingo",
+        "en": "Bingo inventory system"
       },
       "description": {
-        "es": "Aplicación de escritorio para gestión de inventarios en una lotería.",
-        "en": "Desktop application for inventory management in a lottery business."
+        "es": "Aplicación de escritorio para gestión de inventarios en un negocio de Bingo.",
+        "en": "Desktop application for inventory management in a Bingo business."
       },
       "technologies": ["Python", "Tkinter"],
-      "visibility": "private",
-      "links": {}
+      "visibility": "public",
+      "links": {
+        "repo": "https://github.com/zAxOzXVIII/Portafolio"
+      }
     },
     {
       "id": "university-projects",
       "name": {
-        "es": "Gestión de proyectos universitarios",
-        "en": "University project management"
+        "es": "App Harinas — Gestión universitaria",
+        "en": "App Harinas — University project"
       },
       "description": {
-        "es": "Aplicación web y móvil para la gestión de proyectos en una universidad.",
-        "en": "Web and mobile application for project management at a university."
+        "es": "App móvil (Expo + React Native) y API REST para gestión de inventario, roles de usuario y telemetría con Arduino.",
+        "en": "Mobile app (Expo + React Native) and REST API for inventory management, user roles, and Arduino telemetry."
       },
-      "technologies": ["React", "Node.js", "MySQL"],
-      "visibility": "private",
-      "links": {}
+      "technologies": ["React Native", "TypeScript", "Node.js", "Express", "MongoDB"],
+      "visibility": "public",
+      "links": {
+        "repo": "https://github.com/zAxOzXVIII/app-harinas"
+      }
     },
     {
       "id": "activity-management",

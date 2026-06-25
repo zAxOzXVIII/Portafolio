@@ -25,7 +25,7 @@ Sitio estático ligero pensado para GitHub Pages: una sola página con secciones
 - **Hero** — Presentación con foto y frase profesional
 - **Habilidades** — PHP/Laravel, JS/React, Python/Django, bases de datos, Docker, etc.
 - **Experiencia** — internet4E, freelance
-- **Proyectos** — Inventarios, gestión universitaria, comandas, licencias automotrices…
+- **Proyectos** — Bingo (inventarios), App Harinas (universitario), licencias automotrices, comandas…
 - **Educación** — Ingeniería en Informática, ciberseguridad (en progreso)
 - **Contacto** — GitHub, LinkedIn, WhatsApp
 - **CV** — Descarga en PDF

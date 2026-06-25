@@ -42,8 +42,8 @@
 
 ## Proyectos destacados
 
-1. Sistema de inventarios para una lotería (Tkinter)
-2. Aplicación de gestión de proyectos web y app para una universidad
+1. Sistema de inventarios para Bingo (Tkinter)
+2. App Harinas — gestión universitaria (React Native + Node.js + MongoDB)
 3. Aplicación de gestión de actividades
 4. Sistema de comandas
 5. Gestores inteligentes
