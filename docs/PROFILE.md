@@ -8,7 +8,7 @@
 |-------|-------|
 | **Nombre** | Marden Adrian BARRERA ROSALES |
 | **Título** | Ingeniero en Informática (Desarrollador backend con conocimientos en frontend) |
-| **Frase** | Me presento como un programador capaz y didáctico con determinación y disciplina por mejorar |
+| **Frase** | Desarrollador con enfoque en backend, actitud didáctica y compromiso constante con aprender y mejorar. |
 | **Ubicación** | Venezuela — San Cristóbal |
 | **Foto** | `assets/images/profile.png` |
 
