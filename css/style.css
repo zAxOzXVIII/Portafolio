@@ -860,9 +860,16 @@ button {
   color: var(--color-highlight);
 }
 
-.project-card__link--muted {
+.project-card__badge {
+  margin: 0;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--color-muted);
-  cursor: default;
+  border-top: 1px solid var(--color-border);
 }
 
 /* Education

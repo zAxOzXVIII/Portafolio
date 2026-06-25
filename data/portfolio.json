@@ -124,6 +124,7 @@
         "en": "System with permission manager and verifications for the U.S. market"
       },
       "technologies": ["PHP", "Laravel", "MySQL"],
+      "visibility": "private",
       "links": {}
     },
     {
@@ -137,6 +138,7 @@
         "en": "Desktop application for inventory management in a lottery business."
       },
       "technologies": ["Python", "Tkinter"],
+      "visibility": "private",
       "links": {}
     },
     {
@@ -150,6 +152,7 @@
         "en": "Web and mobile application for project management at a university."
       },
       "technologies": ["React", "Node.js", "MySQL"],
+      "visibility": "private",
       "links": {}
     },
     {
@@ -163,6 +166,7 @@
         "en": "Platform to organize and track activities."
       },
       "technologies": ["JavaScript", "PHP"],
+      "visibility": "private",
       "links": {}
     },
     {
@@ -176,6 +180,7 @@
         "en": "System for real-time order and ticket management."
       },
       "technologies": ["PHP", "MySQL"],
+      "visibility": "private",
       "links": {}
     },
     {
@@ -189,6 +194,7 @@
         "en": "Automation solutions with intelligent workflows."
       },
       "technologies": ["n8n", "Node-RED", "Docker"],
+      "visibility": "private",
       "links": {}
     }
   ],

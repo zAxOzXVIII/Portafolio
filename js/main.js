@@ -32,7 +32,7 @@ const UI_STRINGS = {
     statusCompleted: "Completado",
     statusInProgress: "En progreso",
     pendingInstitution: "[PENDIENTE] Institución",
-    noProjectLinks: "Sin enlaces públicos",
+    projectPrivate: "Proyecto para cliente",
     projectRepo: "Repositorio",
     projectDemo: "Demo",
     contactGithub: "GitHub",
@@ -72,7 +72,7 @@ const UI_STRINGS = {
     statusCompleted: "Completed",
     statusInProgress: "In progress",
     pendingInstitution: "[PENDING] Institution",
-    noProjectLinks: "No public links",
+    projectPrivate: "Client project",
     projectRepo: "Repository",
     projectDemo: "Demo",
     contactGithub: "GitHub",
@@ -219,15 +219,19 @@ function renderProjects() {
       const links = project.links ?? {};
       const hasRepo = Boolean(links.repo);
       const hasDemo = Boolean(links.demo);
-      const linksHtml =
-        hasRepo || hasDemo
-          ? `
+      const isPrivate = project.visibility !== "public";
+
+      let footerHtml = "";
+      if (hasRepo || hasDemo) {
+        footerHtml = `
           <div class="project-card__links">
             ${hasRepo ? `<a class="project-card__link" href="${escapeHtml(links.repo)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("projectRepo"))}</a>` : ""}
             ${hasDemo ? `<a class="project-card__link" href="${escapeHtml(links.demo)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("projectDemo"))}</a>` : ""}
           </div>
-        `
-          : `<div class="project-card__links"><span class="project-card__link project-card__link--muted">${escapeHtml(t("noProjectLinks"))}</span></div>`;
+        `;
+      } else if (isPrivate) {
+        footerHtml = `<p class="project-card__badge">${escapeHtml(t("projectPrivate"))}</p>`;
+      }
 
       return `
         <article class="project-card reveal" role="listitem" style="transition-delay: ${index * 0.05}s">
@@ -238,7 +242,7 @@ function renderProjects() {
               .map((tech) => `<span class="skill-tag">${escapeHtml(tech)}</span>`)
               .join("")}
           </div>
-          ${linksHtml}
+          ${footerHtml}
         </article>
       `;
     })
